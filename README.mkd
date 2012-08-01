@@ -1,0 +1,100 @@
+Gain
+====
+
+A simple extension method for working with immutable objects.
+
+*NOTE*: This is in no way production ready. It's more just a starting point for
+me to explore various ways of developing with immutable objects.
+
+I like all the pros that working with immutable objects brings to the table, but
+I'm also really lazy, which means that all the plumbing that I'd need just to
+change an arbitrary property of an immutable object gives me a headache.
+
+So this is an attempt to automate that (to some degree).
+
+--------------------------------------------------------------------------------
+
+Usage
+=====
+
+The Problem
+-----------
+
+Here's a pretty typical immutable type:
+
+
+    public class Product
+    {
+      public Product(int id, string name, decimal price)
+      {
+          this.Id = id;
+          this.Name = name;
+          this.Price = price;
+      }
+
+      public int Id { get; private set; }
+
+      public string Name { get; private set; }
+
+      public decimal Price { get; private set; }
+    }
+
+
+Then, let's say you have an iPod Nano:
+
+    var ipodNano = new Product(1, "iPod Nano", 149.99m);
+
+If the price drops to $99.99, or you need to apply a discount, or whatever, then
+you have to jump through hoops, specifying constructor parameters for values
+you're not interested in changing, just to change the single one that you ARE.
+
+    var discountedIpodNano = new Product(ipodNano.Id, ipostNano.Name, 99.99m);
+
+With complicated types, this can get out of hand quickly. One way of fixing this 
+is by implementing `ChangeX()` methods for each property. For example:
+
+    public class Product
+    {
+      ...
+
+      public Product ChangeId(int id)
+      {
+        return new Product(id, this.Name, this.Price) ;
+      }
+
+      public Product ChangeName(string name)
+      {
+        return new Product(this.Id, this.Name, this.Price);
+      }
+
+      public Product ChangePrice(decimal price)
+      {
+        return new Product(this.Id, this.Name, price);
+      }
+    }
+
+I find this kind of boilerplate rather ridiculous, and it makes immutability seem
+rather expensive.
+
+I think we can do better, and this library attempts to do just that.
+
+There is only a single extension method:
+
+    public static TObj Change<TObj, TVal>(this TObj obj, Expression<Func<TObj, TVal>> expr, TVal newVal);
+
+Changing the previous discounted ipod nano call to:
+
+    var discountedIpodNano = ipodNano.Change(p => p.Price, 99.99m);
+
+Caveats
+=======
+
+There's a couple of conventions that are required:
+
+1. The constructor used will be the one with the _largest_
+number of parameters
+2. Parameters for that constructor must be named the same (case-insensitive) as
+the property that will be used to supply the value for that parameter.
+3. All parameters for the constructor must have a corresponding property.
+However, not all properties must have a corresponding parameter
+

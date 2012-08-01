@@ -7,7 +7,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Unsilenced
+namespace Gain
 {
     using System;
     using System.Collections.Concurrent;
@@ -69,7 +69,7 @@ namespace Unsilenced
             {
                 var msg = string.Format(
                     "No matching property found for constructor argument {0} on type {1}", p.Name, type.FullName);
-               throw new InvalidOperationException(msg); 
+               throw new InvalidOperationException(msg);
             }
 
             return Expression.Convert(Expression.Property(srcParam, prop), p.ParameterType);

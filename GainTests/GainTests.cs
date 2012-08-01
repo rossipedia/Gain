@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="UnsilencedTests.cs" company="Bryan J. Ross">
+// <copyright file="GainTests.cs" company="Bryan J. Ross">
 //   (c) Bryan J. Ross. This code is provided as-is, with no warranty expressed or implied. Do with it as you will.
 // </copyright>
 // <summary>
@@ -7,17 +7,17 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace UnsilencedTests
+namespace GainTests
 {
     using System;
 
-    using Unsilenced;
+    using Gain;
     using NUnit.Framework;
 
     /// <summary>
     /// The unsilenced tests.
     /// </summary>
-    public class UnsilencedTests
+    public class GainTests
     {
         private class Product
         {

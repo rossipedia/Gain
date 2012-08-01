@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unsilenced", "Unsilenced\Unsilenced.csproj", "{3EE88FEB-F388-4A78-82B3-55D11540AFD2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gain", "Gain\Gain.csproj", "{3EE88FEB-F388-4A78-82B3-55D11540AFD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnsilencedTests", "UnsilencedTests\UnsilencedTests.csproj", "{F91DE6F1-D9E0-46F1-A5C5-9F12BBE37774}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GainTests", "GainTests\GainTests.csproj", "{F91DE6F1-D9E0-46F1-A5C5-9F12BBE37774}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0891C4C3-E5AC-439C-B4E6-9A302F5C54EE}"
 	ProjectSection(SolutionItems) = preProject
