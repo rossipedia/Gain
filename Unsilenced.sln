@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unsilenced", "Unsilenced\Unsilenced.csproj", "{3EE88FEB-F388-4A78-82B3-55D11540AFD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnsilencedTests", "UnsilencedTests\UnsilencedTests.csproj", "{F91DE6F1-D9E0-46F1-A5C5-9F12BBE37774}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0891C4C3-E5AC-439C-B4E6-9A302F5C54EE}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+		.nuget\nuget.exe = .nuget\nuget.exe
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A67369BA-DC70-4EA3-AC0E-3E84390F27E5}"
+	ProjectSection(SolutionItems) = preProject
+		Settings.StyleCop = Settings.StyleCop
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EE88FEB-F388-4A78-82B3-55D11540AFD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EE88FEB-F388-4A78-82B3-55D11540AFD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EE88FEB-F388-4A78-82B3-55D11540AFD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EE88FEB-F388-4A78-82B3-55D11540AFD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F91DE6F1-D9E0-46F1-A5C5-9F12BBE37774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F91DE6F1-D9E0-46F1-A5C5-9F12BBE37774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F91DE6F1-D9E0-46F1-A5C5-9F12BBE37774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F91DE6F1-D9E0-46F1-A5C5-9F12BBE37774}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
