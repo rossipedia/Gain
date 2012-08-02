@@ -95,6 +95,19 @@ Changing the previous discounted ipod nano call to:
 var discountedIpodNano = ipodNano.Change(p => p.Price, 99.99m);
 ```
 
+Say What?
+=========
+
+In a nutshell, what's happening here is:
+
+1. For the type `TObj`, a constructor is looked up.
+2. For each parameter of the constructor, if it has the same name as the property passed into 
+   the `Change()` call, then the value is used for that parameter.
+3. Otherwise, a readable property of the same name (case-insensitive) on `TObj` is used to supply the value
+   of the parameter. 
+4. The call is built with System.Linq.Expressions, and then cached for later use, so multiple calls
+   providing the same `TObj` and Property as the expression will reuse the same Func<> object.
+
 Caveats
 =======
 
@@ -107,3 +120,4 @@ the property that will be used to supply the value for that parameter.
 3. All parameters for the constructor must have a corresponding property.
 However, not all properties must have a corresponding parameter
 
+I still need to put in a ton of error checking and general "robust-ness" but the basic functionality is there.
