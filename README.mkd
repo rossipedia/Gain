@@ -68,7 +68,7 @@ public class Product
 
   public Product ChangeName(string name)
   {
-    return new Product(this.Id, this.Name, this.Price);
+    return new Product(this.Id, name, this.Price);
   }
 
   public Product ChangePrice(decimal price)
