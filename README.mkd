@@ -96,7 +96,7 @@ var discountedIpodNano = ipodNano.Change(p => p.Price, 99.99m);
 ```
 
 Say What?
-=========
+---------
 
 In a nutshell, what's happening here is:
 
@@ -109,7 +109,7 @@ In a nutshell, what's happening here is:
    providing the same `TObj` and Property as the expression will reuse the same Func<> object.
 
 Caveats
-=======
+-------
 
 There's a couple of conventions that are required:
 
