@@ -1,3 +1,5 @@
+> C# [record types](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/records) make this kind of nonsense pretty much obsolete.
+
 Gain
 ====
 
